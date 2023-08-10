@@ -7,16 +7,23 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
   </head>
 
   <body>
 
-    <%= render "shared/navbar" %>
-    <%= render "shared/flashes" %>
-    <%= yield %>
+    <div class="page-container">
+      <div class="navbar-container">
+        <%= render "shared/navbar" %>
+      </div>
+      <div class="content-container">
+        <%= render "shared/flashes" %>
+        <%= yield %>
+      </div>
+      <div class="footer-container">
+        <%= render "shared/footer" %>
+      </div>
+    </div>
 
   </body>
-  <%= render "shared/footer" %>
-
-
 </html>
