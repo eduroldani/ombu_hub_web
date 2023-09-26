@@ -1,4 +1,7 @@
 .float{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 	position:fixed;
 	width:  100px;
 	height:100px;
@@ -7,12 +10,8 @@
 	background-color:#25d366;
 	color:#FFF;
 	border-radius:50px;
-	text-align:center;
   font-size:60px;
 	box-shadow: 2px 2px 3px #999;
+  text-decoration: none;
   // z-index:100;
-}
-
-.my-float{
-	margin-top:16px;
 }
