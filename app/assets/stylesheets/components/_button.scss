@@ -16,14 +16,22 @@
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #47D0D0;
+  background: $primary-color;
   transition: background 0.3s ease;
   width: max-content;
+  font-family: $headers-font, sans-serif;
+  letter-spacing: 1px;
+
 
 }
 
+
+// 47D0D0
+
+// 0D507C
+
 .btn-flat:hover {
-  background: #0D507C;
+  background: $secondary-color;
   color: white;
 }
 
