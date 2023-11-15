@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get "test", to: "pages#test"
 
-  get "online", to: "pages#online"
+  get "free-workshop-arduino-for-kids", to: "pages#workshopArduino"
 
 
 end

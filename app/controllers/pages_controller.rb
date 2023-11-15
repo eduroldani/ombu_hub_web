@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :test, :about, :online]
+  skip_before_action :authenticate_user!, only: [:home, :test, :about, :workshopArduino]
 
   def home
   end
@@ -10,6 +10,6 @@ class PagesController < ApplicationController
   def test
   end
 
-  def online
+  def workshopArduino
   end
 end
