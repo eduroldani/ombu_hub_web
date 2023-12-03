@@ -1,0 +1,22 @@
+<% if current_user.admin == true %>
+
+<ul>
+  <% @courses.each do |course| %>
+    <li>Title <%= course.title %></li>
+    <li>Description <%= course.description %></li>
+    <li>When <%= course.when %></li>
+    <li>URL <%= course.url %></li>
+    <%= link_to "Delete",
+    course_path(course.url),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+    %>
+
+    <%= link_to "Edit",
+    edit_course_path(course.url)
+    %>
+
+
+  <% end %>
+</ul>
+
+<% end %>

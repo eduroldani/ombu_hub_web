@@ -1,0 +1,19 @@
+<% if current_user.admin == true %>
+
+
+
+<div class=" container m-5 ">
+
+<%= simple_form_for @course, html: { class: 'form' } do |f| %>
+<%= f.input :url, label_html: { class: 'form-label' }, input_html: { class: 'form-control' } %>
+  <%= f.input :title, label_html: { class: 'form-label' }, input_html: { class: 'form-control' } %>
+  <%= f.input :description, as: :text, label_html: { class: 'form-label' }, input_html: { class: 'form-control' } %>
+   <%= f.input :when, as: :text, label_html: { class: 'form-label' }, input_html: { class: 'form-control' } %>
+<br>
+  <%= f.button :submit, 'Create or Update', class: 'btn btn-primary' %>
+
+<% end %>
+</div>
+
+<% else %>
+<% end %>

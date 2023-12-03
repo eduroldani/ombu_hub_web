@@ -114,4 +114,12 @@
   </div>
 
 
+
+<% if current_user.admin == true %>
+    <%= link_to "Delete",
+    course_path(@course),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+    %>
+<% end %>
+
 </div>

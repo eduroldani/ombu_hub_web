@@ -11,15 +11,9 @@ Rails.application.routes.draw do
 
   get "free-workshop-arduino-for-kids", to: "pages#workshopArduino"
 
-  resources :pages, param: :title
+  # resources :pages, param: :title
 
-  get "courses/new", to: "courses#new"
-
-  get "courses/:id", to: "courses#show"
-
-  post "courses", to: "courses#create"
-
-
+  resources :courses
 
 
 
