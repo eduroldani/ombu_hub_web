@@ -1,7 +1,7 @@
 class Course < ApplicationRecord
 
   def to_param
-    title.parameterize
+    url.parameterize
   end
 
 end

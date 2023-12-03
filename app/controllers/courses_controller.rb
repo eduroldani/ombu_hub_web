@@ -35,7 +35,7 @@ class CoursesController < ApplicationController
   end
 
 
-  def update
+
     def update
       @course = Course.find_by(url: params[:id])
 
@@ -46,7 +46,7 @@ class CoursesController < ApplicationController
         render :edit
       end
     end
-  end
+
 
 
 
@@ -62,7 +62,7 @@ class CoursesController < ApplicationController
   private
 
   def course_params
-    params.require(:course).permit(:title, :description, :when,:url)
+    params.require(:course).permit(:title, :description, :when,:url ,:who, :what)
   end
 
 end

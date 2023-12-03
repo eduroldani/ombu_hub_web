@@ -4,11 +4,17 @@
 
 <div class=" container m-5 ">
 
+    <h2>Add / Edit a course</h2>
+
+
 <%= simple_form_for @course, html: { class: 'form' } do |f| %>
-<%= f.input :url, label_html: { class: 'form-label' }, input_html: { class: 'form-control' } %>
-  <%= f.input :title, label_html: { class: 'form-label' }, input_html: { class: 'form-control' } %>
-  <%= f.input :description, as: :text, label_html: { class: 'form-label' }, input_html: { class: 'form-control' } %>
-   <%= f.input :when, as: :text, label_html: { class: 'form-label' }, input_html: { class: 'form-control' } %>
+  <%= f.input :url, label_html: { class: 'form-label' }, input_html: { class: 'form-control' },label: 'URL of the website', error: 'Username is mandatory, please specify one' %>
+  <%= f.input :title, label_html: { class: 'form-label' }, input_html: { class: 'form-control' }, label: 'Title of the workshop' %>
+  <%= f.input :description, as: :text, label_html: { class: 'form-label' }, input_html: { class: 'form-control' },label: 'Description' %>
+  <%= f.input :when, as: :text, label_html: { class: 'form-label' }, input_html: { class: 'form-control' } ,label: 'When and where the course will be done'%>
+  <%= f.input :what, as: :text, label_html: { class: 'form-label' }, input_html: { class: 'form-control' } ,label: 'What is needed for the course'%>
+  <%= f.input :who, as: :text, label_html: { class: 'form-label' }, input_html: { class: 'form-control' } , label: 'For who is the workshop'%>
+
 <br>
   <%= f.button :submit, 'Create or Update', class: 'btn btn-primary' %>
 
