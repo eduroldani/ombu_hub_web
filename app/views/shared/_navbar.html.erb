@@ -27,7 +27,7 @@
             <%= link_to "Calendar", "https://calendar.google.com/calendar/embed?src=1nv58p01md6p91adm2l65p4g8s%40group.calendar.google.com&ctz=Europe%2FParis", class: "nav-link" %>
             <%# <%= link_to "Messages", "#", class: "nav-link" %>
           <li class="nav-item dropdown">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= image_tag "robot.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <% if current_user.admin? %>
                 <%= link_to "New Course", new_course_path, class: "dropdown-item" %>
