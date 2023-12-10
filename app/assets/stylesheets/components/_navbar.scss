@@ -3,6 +3,7 @@
   background: white;
   border-bottom: 1px;
   border-color: black;
+
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -11,4 +12,9 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+
+li .nav-item .dropdown {
+  list-style: none;
 }

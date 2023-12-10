@@ -1,7 +1,47 @@
+<!-- Old Nav Bar
+
+
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "ombu_logo.png" %>
     <% end %>
+  </div>
+</div>
+
+-->
+
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <%= link_to "#", class: "navbar-brand" do %>
+      <%= image_tag "ombu_logo.png" %>
+    <% end %>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <% if user_signed_in? %>
+            <%= link_to "Calendar", "https://calendar.google.com/calendar/embed?src=1nv58p01md6p91adm2l65p4g8s%40group.calendar.google.com&ctz=Europe%2FParis", class: "nav-link" %>
+            <%# <%= link_to "Messages", "#", class: "nav-link" %>
+          <li class="nav-item dropdown">
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <% if current_user.admin? %>
+                <%= link_to "New Course", new_course_path, class: "dropdown-item" %>
+                <%= link_to "Courses", courses_path , class: "dropdown-item" %>
+              <% end %>
+              <%= link_to "Log out",  destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
+            </div>
+          </li>
+        <% else %>
+          <!--li class="nav-item"-->
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <!--/li-->
+        <% end %>
+      </ul>
+    </div>
   </div>
 </div>
