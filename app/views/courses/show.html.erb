@@ -35,7 +35,11 @@
     <div class="col-12 col-md-6">
       <div class="card_photo justify-content-center justify-content-md-end">
 
-            <%= cl_image_tag @course.photo.key, class: 'photo' %>
+<% if @course.photo.attached? == false %>
+    <%= image_tag('oh.png', class: 'photo') %>
+<% else %>
+    <%= cl_image_tag @course.photo.key, class: 'photo' %>
+<% end %>
             <%# <%= image_tag('bn3.png', class: 'photo') %>
 
             <%# Without cloudinary - Code %>
